@@ -1,0 +1,14 @@
+<% completed = '<input disabled="true "checked="true" type="checkbox" id="completed" name="completed" value="task">
+<label for="completed">Task completed</label><br>'.html_safe %>
+<% not_completed = '<input disabled="true" type="checkbox" id="completed" name="completed" value="task">
+<label for="completed">Task NOT completed</label><br>'.html_safe %>
+completed
+<div class="container">
+<h1><%= @task.title %></h1>
+<p><%= @task.details %></p>
+<%= @task.completed ? completed : not_completed %>
+<%= link_to "Edit task", edit_path(@task) %>
+<%= link_to "Back to the list", tasks_path  %>
+</div>
+
+

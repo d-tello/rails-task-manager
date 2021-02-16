@@ -1,0 +1,10 @@
+<%= form_for task do |f| %>
+<div class="container">
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <%= f.submit %>
+  <%= link_to "Back to the list", tasks_path  %>
+  <% end %>
+</div>
